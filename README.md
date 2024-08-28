@@ -72,17 +72,17 @@ To train and evaluate the model, use the following commands:
 
 #### MSL / SMAP datasets
 ```bash
-python main/main_MSL
+python main/main_MSL.py
 ```
 
 #### SMD dataset
 ```bash
-python main/main_SMD
+python main/main_SMD.py
 ```
 
 #### Boiler dataset
 ```bash
-python main/main_Boiler
+python main/main_Boiler.py
 ```
 
 ## Datasets
