@@ -5,8 +5,8 @@ This repository contains the source code for the research article "*[DACAD: Doma
 - [Zahra Z. Darban](https://scholar.google.com/citations?user=wl6XsiwAAAAJ&hl=en) [Monash University],
 - [Yiyuan Yang](https://scholar.google.com/citations?user=FUuGvZIAAAAJ) [University of Oxford],
 - [Geoffrey I. Webb](https://scholar.google.com/citations?user=_1tpf8AAAAAJ&hl=en) [Monash University], 
-- [Charu C. Aggarwal](https://scholar.google.com/citations?user=x_wsduUAAAAJ&hl=en) [IBM], and 
-- [Qingsong Wen](https://scholar.google.com/citations?user=vjPJvwYAAAAJ&hl=en) [Squirrel AI]
+- [Charu C. Aggarwal](https://scholar.google.com/citations?user=x_wsduUAAAAJ&hl=en) [IBM],
+- [Qingsong Wen](https://scholar.google.com/citations?user=vjPJvwYAAAAJ&hl=en) [Squirrel AI], and
 - [Mahsa Salehi](https://scholar.google.com/citations?user=tTxJ1owAAAAJ&hl=en) [Monash University]
 
 ![enter image description here](figs/monash-logo-mono.svg)
