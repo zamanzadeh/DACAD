@@ -19,9 +19,11 @@ from argparse import ArgumentParser
 from collections import namedtuple
 
 from algorithms import get_algorithm
+import torch
 
 
 def main(args):
+    DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     with open(os.path.join(args.experiments_main_folder, args.experiment_folder,
                            str(args.id_src) + "-" + str(args.id_trg), 'commandline_args.txt'), 'r') as f:
         saved_args_dict_ = json.load(f)
@@ -75,7 +77,7 @@ def main(args):
     input_static_dim = dataset_test_src[0]['static'].shape[0] if 'static' in dataset_test_src[0] else 0
 
     # Get our algorithm
-    algorithm = get_algorithm(saved_args, input_channels_dim=input_channels_dim, input_static_dim=input_static_dim)
+    algorithm = get_algorithm(saved_args, input_channels_dim=input_channels_dim, input_static_dim=input_static_dim, device=DEVICE)
 
     experiment_folder_path = os.path.join(args.experiments_main_folder, args.experiment_folder,
                                           str(args.id_src) + "-" + str(args.id_trg))

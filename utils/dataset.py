@@ -571,7 +571,8 @@ class HVACDataset(Dataset):
         self.root_dir = root_dir
         self.subject_id = subject_id
         self.split_type = split_type
-        self.is_cuda = is_cuda
+        # 只有在 is_cuda 為 True *且* CUDA 實際可用時，才設為 True
+        self.is_cuda = is_cuda and torch.cuda.is_available() # <-- 修改後
         self.verbose = verbose
 
         self.load_sequence()
@@ -657,7 +658,7 @@ class HVACDataset_trg(Dataset):
         self.root_dir = root_dir
         self.subject_id = subject_id
         self.split_type = split_type
-        self.is_cuda = is_cuda
+        self.is_cuda = is_cuda and torch.cuda.is_available()
         self.verbose = verbose
 
         self.load_sequence()

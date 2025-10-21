@@ -19,9 +19,9 @@ from sklearn.metrics import accuracy_score
 
 
 #Given the args, it will return the algorithm directly
-def get_algorithm(args, input_channels_dim, input_static_dim):
+def get_algorithm(args, input_channels_dim, input_static_dim, device):
     if args.algo_name == "dacad":
-        return DACAD(args, input_channels_dim, input_static_dim)
+        return DACAD(args, input_channels_dim, input_static_dim, device)
     else:
         return None
 
@@ -125,7 +125,8 @@ class DACAD(Base_Algorithm):
 
         self.criterion_CL = nn.CrossEntropyLoss()
 
-        self.cuda()
+        self.device = device
+        self.to(self.device)
 
         self.optimizer = torch.optim.Adam(
         self.model.parameters(),
